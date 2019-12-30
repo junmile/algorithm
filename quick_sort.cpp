@@ -7,12 +7,10 @@ void quickSort(int *data, int start, int end){
     if(start>=end){
         return;
     }
-    
     int key = start;
     int left = key+1;
     int right = end;
     int temp;
-
     while(left<=right){//엇갈릴때까지 반복
         while(data[left]<=data[key]){// 키값보다 큰값을 만날때 까지
             left++;
@@ -31,14 +29,8 @@ void quickSort(int *data, int start, int end){
         }
         quickSort(data, start, right - 1);
         quickSort(data, right + 1, end);
-
-        
-
     }
-
-
 }
-
 int main(void){
     quickSort(data, 0, number - 1);
     for(int i = 0; i < number; i++){
